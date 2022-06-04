@@ -1,0 +1,15 @@
+.user-header {
+    padding: 40px 60px;
+    font-family: 'Roboto';
+}
+.user-header h1 {
+    font-size: 40px;
+}
+.user-header h1 span {
+    color: red;
+}
+.user-header h3 {
+    font-size: 18px;
+    font-weight: normal;
+    margin: 20px 0;
+}
