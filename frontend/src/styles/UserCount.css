@@ -1,0 +1,27 @@
+.count {
+    background: #FBFBFB;
+    padding: 20px;
+    display: flex;
+    width: 220px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    align-items: center;
+    font-family: 'Roboto';
+}
+.count img {
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+}
+.countName {
+    font-size: 13px;
+    color: #5a69a8;
+}
+.countInfo {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+aside {
+    margin-left: 50px;
+}

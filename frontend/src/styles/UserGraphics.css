@@ -1,3 +1,8 @@
 .user-graphics-top {
+    width: 100%;
     display: flex;
+    justify-content: space-between;
+}
+.user-graphics {
+    margin: 0 100px;
 }

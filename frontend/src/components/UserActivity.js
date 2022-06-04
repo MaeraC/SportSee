@@ -42,7 +42,7 @@ function UserActivity() {
                 </div>
             </div>
 
-            <BarChart width={770} height={270} data={userActivity} barCategoryGap={35} barGap={8} margin={{top: 50 , left: 20 , bottom: 20}}>
+            <BarChart width={770} height={250} data={userActivity} barCategoryGap={35} barGap={8} margin={{top: 50 , left: 20 , bottom: 20}}>
                 <CartesianGrid strokeDasharray="3 3" vertical={false} />
                 <XAxis tick={{ transform: 'translate(0, 16)', stroke: "#9B9EAC", fontSize: "14px" }} scale="auto"  padding={{ left: -25, right: -25 }} tickLine={false} dataKey="name" axisLine={false} interval={0} />
                 <YAxis yAxisId={"kil"} domain={["dataMin - 2", "dataMax + 1"]} tick={{ transform: 'translate(0, 0)', fontSize: "14px" }} tickMargin={15} tickLine={false} orientation="right" dataKey="kilogram" axisLine={false} />

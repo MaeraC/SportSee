@@ -15,4 +15,15 @@ async function ApiUserActivity(userId) {
     return userActivity
 }
 
-export { ApiUserName , ApiUserActivity }
+async function ApiUserCount(userId) {
+    const response = await fetch(`http://localhost:3000/user/${userId}`)
+    const data = await response.json()
+    const userCount = data.data.keyData
+    const userCalories = userCount.calorieCount
+    const userProteins = userCount.proteinCount
+    const userGlucides = userCount.carbohydrateCount
+    const userLipids = userCount.lipidCount
+    return [ userCalories , userProteins , userGlucides , userLipids ]
+}
+
+export { ApiUserName , ApiUserActivity , ApiUserCount }
