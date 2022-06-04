@@ -1,6 +1,15 @@
+import Header from '../components/Header'
+import VerticalNav from '../components/VerticalNav'
+import '../styles/Dashboard.css'
+
 function Dashboard() {
     return (
-        <h1>DASHBOARD</h1>
+        <div className="main">
+            <Header />
+            <section>
+                <VerticalNav />
+            </section>
+        </div>
     )
 }
 

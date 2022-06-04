@@ -1,0 +1,13 @@
+.vertical-nav {
+    width: 80px;
+    height: 100vh;
+    background: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.vertical-nav img {
+    width: 50px;
+    margin-bottom: 15px;
+}
