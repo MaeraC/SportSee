@@ -1,0 +1,33 @@
+.graphic-activity {
+    background-color: #FBFBFB;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.activity-legende {
+    font-family: 'Roboto';
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+.activity-legende h3 {
+    font-size: 15px;
+    font-weight: 500;
+}
+.legende {
+    display: flex;
+    align-items: center;
+}
+.poids {
+    margin-right: 40px;
+}
+.poids , .cal {
+    display: flex;
+    font-size: 14px;
+    align-items: center;
+}
+.legende img {
+    width: 8px;
+    height: 8px;
+    margin-right: 10px;
+}
