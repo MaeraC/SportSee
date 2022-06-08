@@ -6,3 +6,8 @@
 .user-graphics {
     margin: 0 100px;
 }
+.user-graphics-bottom {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}

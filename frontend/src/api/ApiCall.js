@@ -26,4 +26,11 @@ async function ApiUserCount(userId) {
     return [ userCalories , userProteins , userGlucides , userLipids ]
 }
 
-export { ApiUserName , ApiUserActivity , ApiUserCount }
+async function ApiUserSessions(userId) {
+    const response = await fetch(`http://localhost:3000/user/${userId}/average-sessions`)
+    const data = await response.json()
+    const userSessions = data.data.sessions
+    return userSessions
+}
+
+export { ApiUserName , ApiUserActivity , ApiUserCount , ApiUserSessions }

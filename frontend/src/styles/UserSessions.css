@@ -1,0 +1,26 @@
+.user-sessions {
+    width: 30%;
+    position: relative;
+}
+.user-sessions h2 {
+    position: absolute;
+    z-index: 99;
+    font-family: 'Roboto';
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: normal;
+    width: 50%;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+.lineChart {
+    background: red; 
+    border-radius: 5px;
+    font-family: 'Roboto';
+}
+.custom-tooltip {
+    background: white;
+    padding: 5px;
+    font-family: 'Roboto';
+    font-size: 10px;
+}
