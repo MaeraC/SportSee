@@ -1,6 +1,8 @@
 import UserActivity from './UserActivity'
 import UserCount from './UserCount'
 import UserSessions from './UserSessions'
+import UserPerformance from './UserPerformances'
+import UserScore from './UserScore'
 import '../styles/UserGraphics.css'
 
 function UserGraphics() {
@@ -8,11 +10,13 @@ function UserGraphics() {
         <div className="user-graphics">
             <div className="user-graphics-top">
                 <UserActivity />
-                <UserCount />
+                <div className="user-graphics-bottom">
+                    <UserSessions />
+                    <UserPerformance />
+                    <UserScore />
+                </div>
             </div>
-            <div className="user-graphics-bottom">
-                <UserSessions />
-            </div>
+            <UserCount />
         </div>
     )
 }

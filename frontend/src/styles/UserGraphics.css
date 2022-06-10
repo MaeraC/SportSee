@@ -1,13 +1,16 @@
 .user-graphics-top {
     width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
 }
 .user-graphics {
     margin: 0 100px;
+    display: flex;
 }
 .user-graphics-bottom {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    margin-top:20px;
 }

@@ -33,4 +33,23 @@ async function ApiUserSessions(userId) {
     return userSessions
 }
 
-export { ApiUserName , ApiUserActivity , ApiUserCount , ApiUserSessions }
+async function ApiUserPerformance(userId) {
+    const response = await fetch(`http://localhost:3000/user/${userId}/performance`)
+    const data = await response.json()
+    const userPerformance = Object.values(data.data.kind)
+
+    userPerformance.map((kindPerf, index) => (
+        data.data.data[index].kindPerf = kindPerf
+    ))
+    
+    return data.data.data   
+}
+
+async function ApiUserScore(userId) {
+    const response = await fetch(`http://localhost:3000/user/${userId}`)
+    const data = await response.json()
+    const userScore = data.data.todayScore
+    console.log(userScore)
+}
+
+export { ApiUserName , ApiUserActivity , ApiUserCount , ApiUserSessions , ApiUserPerformance }
