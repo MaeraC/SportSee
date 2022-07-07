@@ -21,8 +21,6 @@ INSTALLATION
 . Recharts (version 2.1.4)
 
 . react-router-dom (version 5.3.0)
-
-. Prop-types (version 15.7.2)
 <br></br>
  
 ### STEP 1 : INSTALLING AND LAUNCHING BACK-END 
