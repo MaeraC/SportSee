@@ -7,10 +7,14 @@ import '../styles/VerticalNav.css'
 function VerticalNav() {
     return(
         <nav className="vertical-nav">
-            <img src={icon1} alt="" />
-            <img src={icon2} alt="" />
-            <img src={icon3} alt="" />
-            <img src={icon4} alt="" />
+            <div className="nav-img" >
+                <img src={icon1} alt="" />
+                <img src={icon2} alt="" />
+                <img src={icon3} alt="" />
+                <img src={icon4} alt="" />
+            </div>
+            
+            <p className="copyright">Copyright, SportSee 2020</p>
         </nav>
     )
 }

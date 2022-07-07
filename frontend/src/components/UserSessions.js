@@ -45,7 +45,7 @@ function UserSessions() {
   return (
     <div className="user-sessions">
       <h2>Durée moyenne des sessions</h2>
-      <LineChart width={260} height={263} data={Datas} margin={{ top: 0, right: 0, left: 0, bottom: 16 }} className="lineChart"> 
+      <LineChart width={250} height={263} data={Datas} margin={{ top: 0, right: 0, left: 0, bottom: 10 }} className="lineChart"> 
         <XAxis dataKey="weekDays" stroke="rgba(255, 255, 255, 0.5)" tickLine={false} axisLine={false} tick={{ fontSize: 12 }} padding={{ left: 11, right: 9 }} />
         <YAxis hide={true} type="number" domain={["dataMin - 10", "dataMax + 40"]} />
         <Tooltip cursor={false} content={<CustomTooltip />} />

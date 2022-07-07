@@ -1,13 +1,27 @@
 .vertical-nav {
-    width: 80px;
-    height: 100vh;
+    position: relative;
     background: black;
     display: flex;
+    align-items: center;
     flex-direction: column;
     justify-content: center;
+}
+.nav-img {
+    display: flex;
+    flex-direction: column;
+    width: 100px;
     align-items: center;
 }
-.vertical-nav img {
-    width: 50px;
-    margin-bottom: 15px;
+.nav-img img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;
+}
+.copyright {
+    font-family: 'Roboto';
+    font-size: 11px;
+    width: 130px;
+    transform: rotate(-90deg);
+    color: white;
+    margin-top: 200px;
 }

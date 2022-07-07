@@ -48,8 +48,22 @@ async function ApiUserPerformance(userId) {
 async function ApiUserScore(userId) {
     const response = await fetch(`http://localhost:3000/user/${userId}`)
     const data = await response.json()
-    const userScore = data.data.todayScore
-    console.log(userScore)
+    const userScore = await [
+        {
+            "value": 1,
+            "fill": "transparent"
+        },
+          {
+            "value": data.data.score ? data.data.score : data.data.todayScore,
+            "fill": "#FF0000"
+        }
+    ]
+
+    let dataValues = Object.values(userScore)
+    let PercentValue = dataValues.map(x => x.value)
+    let PercentString = (PercentValue[1] * 100) + '%'
+
+    return [userScore, PercentString]
 }
 
-export { ApiUserName , ApiUserActivity , ApiUserCount , ApiUserSessions , ApiUserPerformance }
+export { ApiUserName , ApiUserActivity , ApiUserCount , ApiUserSessions , ApiUserPerformance , ApiUserScore }

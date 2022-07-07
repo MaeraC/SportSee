@@ -21,9 +21,9 @@ function UserPerformance() {
     return (
       <div className="user-performance">
         <RadarChart outerRadius={90} width={230} height={230} data={userPerformance}>
-        <PolarGrid radialLines={false} />
-          <PolarAngleAxis dataKey="kindPerf" tick={{fill:"#ffffff", fontSize:10}} axisLine={true} tickLine={true} />
-          <PolarRadiusAxis tickCount={6} domain={[0, 150]} axisLine={false} tick={false} />
+          <PolarGrid radialLines={false} />
+          <PolarAngleAxis dataKey="kindPerf" tick={{fill:"#ffffff", fontSize:12}} axisLine={true} tickLine={true} />
+          <PolarRadiusAxis tickCount={5} domain={[0, 150]} axisLine={false} tick={false} />
           <Radar dataKey="value" stroke="rgba(230, 0, 0, .7)" fill="#E60000" fillOpacity={0.6} />
         </RadarChart>
       </div>

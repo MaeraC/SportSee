@@ -1,0 +1,49 @@
+.user-score {
+    background-color: #FBFBFB;
+    width: 31%;
+    border-radius: 5px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.label {
+    background: white;
+    position: absolute;
+    border-radius: 50%;
+    color: #282D30;
+    font-family: 'Roboto';
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 170px;
+    width: 170px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.percent {
+    color: black;
+    font-size: 25px;
+    font-weight: bold;
+
+}
+.label-txt {
+    color: grey;
+    font-size: 14px;
+    width: 50%;
+    text-align: center;
+    margin-top: 5px;
+}
+.score {
+    font-family: 'Roboto';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 14px;
+}
+.radial {
+    border-radius: 10px;
+}

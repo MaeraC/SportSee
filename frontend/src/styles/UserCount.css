@@ -4,9 +4,10 @@
     display: flex;
     width: 220px;
     border-radius: 5px;
-    margin-bottom: 20px;
+    margin-bottom: 35px;
     align-items: center;
     font-family: 'Roboto';
+    height: 100px;
 }
 .count img {
     width: 50px;
