@@ -1,3 +1,6 @@
+// Appels fetch pour récupérer les données de l'API 
+
+// Récupération du nom de l'utilisateur
 async function ApiUserName(userId) {
     const response = await fetch(`http://localhost:3000/user/${userId}`)
     const data = await response.json()
@@ -5,6 +8,7 @@ async function ApiUserName(userId) {
     return userName
 }
 
+// Récupération de l'activité quotidienne de l'utilisateur (poids/cal)
 async function ApiUserActivity(userId) {
     const response = await fetch(`http://localhost:3000/user/${userId}/activity`)
     const data = await response.json()
@@ -15,6 +19,7 @@ async function ApiUserActivity(userId) {
     return userActivity
 }
 
+// Récupération des données des infos clés du l'utilisateur
 async function ApiUserCount(userId) {
     const response = await fetch(`http://localhost:3000/user/${userId}`)
     const data = await response.json()
@@ -26,6 +31,7 @@ async function ApiUserCount(userId) {
     return [ userCalories , userProteins , userGlucides , userLipids ]
 }
 
+// Récupération du temps de session quotidienne de l'utilisateur 
 async function ApiUserSessions(userId) {
     const response = await fetch(`http://localhost:3000/user/${userId}/average-sessions`)
     const data = await response.json()
@@ -33,6 +39,7 @@ async function ApiUserSessions(userId) {
     return userSessions
 }
 
+// Récupération des différents types d'activités de l'utilisateur
 async function ApiUserPerformance(userId) {
     const response = await fetch(`http://localhost:3000/user/${userId}/performance`)
     const data = await response.json()
@@ -45,6 +52,7 @@ async function ApiUserPerformance(userId) {
     return data.data.data   
 }
 
+// Récupération du score de l'utilisateur atteint par rapport l'objectif donnée
 async function ApiUserScore(userId) {
     const response = await fetch(`http://localhost:3000/user/${userId}`)
     const data = await response.json()
@@ -60,7 +68,9 @@ async function ApiUserScore(userId) {
     ]
 
     let dataValues = Object.values(userScore)
+    // score récupéré
     let PercentValue = dataValues.map(x => x.value)
+    // score converti en %
     let PercentString = (PercentValue[1] * 100) + '%'
 
     return [userScore, PercentString]

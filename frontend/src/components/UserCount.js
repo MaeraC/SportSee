@@ -8,18 +8,22 @@ import iconLipids from '../assets/fat-icon.png'
 import '../styles/UserCount.css'
 
 function UserCount() {
+    // State de départ
     const [ userCalories , setUserCalories ] = useState(true)
+    // récupération de l'id de l'utilisateur 
     const userId = useParams().id
 
     useEffect(() => {
         const fetchUserCount = async () => {
             const currentUserCalories = await ApiUserCount(userId)
             setUserCalories(currentUserCalories)
+            // Données des infos clés récupérées grâce à l'appel fetch
         }
 
         fetchUserCount()
     }, [userId])
 
+    // Données de chaque infos clés intégrées grâce à sa position dans la tableau userCalories
     return(
         <aside>
             <div className="count">

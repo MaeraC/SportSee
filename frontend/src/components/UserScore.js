@@ -5,18 +5,23 @@ import '../styles/UserScore.css'
 import { RadialBarChart , RadialBar } from 'recharts';
 
 function UserScore() {
+    // State de départ
     const [ userScore , setUserScore ] = useState([])
+    // Récupération de l'id de l'utilisateur
     const userId = useParams().id
     
     useEffect(() => {
       async function fetchUserScore() {
         const data = await ApiUserScore(userId)
         setUserScore(data)
+        // Données du score atteint récupéré grâce à l'appel fetch
       }
-  
+
       fetchUserScore()
     }, [userId]) 
 
+    // userScore[1] : score en %
+    // userScore[0] : barre du %
     return (
         <section className="user-score" >
             <div className='label'>

@@ -7,26 +7,29 @@ import { BarChart, CartesianGrid,  XAxis, YAxis, Bar } from 'recharts'
 import '../styles/UserActivity.css'
 
 function UserActivity() {
+    // State de départ : []
     const [ userActivity , setUserActivity ] = useState([])
+    // Récupération de l'id du user
     const userId = useParams().id
-
+    
     useEffect(() => {
         async function fetchUserActivity() {
             const data = await ApiUserActivity(userId)
             setUserActivity(data)
+            // Données de l'activité quotidienne récupérées grâce à l'appel fetch
         }
 
         fetchUserActivity()
     }, [userId])   
 
-    // BartChart : Récupère les données de l'activité du user
+    // BartChart = data : données récupérées intégrées dans le graphique via datas
     // BarCategoryGap : écart entre les duos de barres / BarGap : écart entre les barres
     // CartesianGrid : insère les lignes en pointillés
     // Xaxis : data day sur la ligne horizontale
     // Yaxis : data kilogram sur la ligne verticale 
     // Bar : barres data kilogram & calories
 
-    return (
+    return ( //Implémentation de la légende du graphique
         <div className="graphic-activity">
             <div className="activity-legende">
                 <h3>Activité quotidienne</h3>

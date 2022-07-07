@@ -5,20 +5,26 @@ import '../styles/UserSessions.css'
 import { Line, LineChart, XAxis, YAxis, Tooltip } from "recharts";
 
 function UserSessions() {
+  // State de départ
   const [ userSessions , setUserSessions ] = useState([])
+  // Récupération de l'id de l'utilisateur 
   const userId = useParams().id
+  // Tableau des jours de la semaine
   const weekDays = ["L", "M", "M", "J", "V", "S", "D"];
 
   useEffect(() => {
     async function fetchUserSessions() {
       const data = await ApiUserSessions(userId)
       setUserSessions(data)
+      // Récupération de la durée de chaque session grâce à l'appel fetch
     }
 
     fetchUserSessions()
   }, [userId])   
 
-  // tableau d'objets avec le type et la valeur 
+  // Intégration des jours weekDays pour chaque session 
+  // Intégration de la durée pour chaque session
+  // Données Datas ensuite intégrées au graphique
   const Datas = userSessions.map((item) => {
     return {
       weekDays : weekDays[item.day - 1],
@@ -38,7 +44,7 @@ function UserSessions() {
     return null
   }
 
-  // LineChart data: récupère les données de la durée des sessions
+  // LineChart = data: récupère les données de la durée des sessions
   // Xaxis : data weekDays sur la ligne horizontale
   // Yaxis : data sur la ligne verticale (hidden)
   // Tooltip : info-bulle au survol
