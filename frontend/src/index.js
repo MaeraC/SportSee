@@ -10,14 +10,14 @@ ReactDOM.render(
     <React.StrictMode>
       <Router>
         <Switch>
-          <Route exact path='/'>
+          <Route exact path='/SportSee'>
             <Home />
           </Route>
           <Route path='/dashboard/:id'>
             <Dashboard />
           </Route>
           <Route>
-            <Error />
+            <Error path="*"/>
           </Route>
         </Switch>
       </Router>

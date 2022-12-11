@@ -1,0 +1,19 @@
+.error-img {
+    width: 70%;
+    height: 95%;
+    object-fit: cover;
+}
+.error {
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+}
+.logo-error {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+.logo-error img {
+    width: 150px;
+}
