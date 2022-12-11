@@ -2,7 +2,7 @@
 
 // Récupération du nom de l'utilisateur
 async function ApiUserName(userId) {
-    const response = await fetch(`http://localhost:3000/user/${userId}`)
+    const response = await fetch(`http://localhost:3001/user/${userId}`)
     const data = await response.json()
     const userName = data.data.userInfos.firstName
     return userName
@@ -10,7 +10,7 @@ async function ApiUserName(userId) {
 
 // Récupération de l'activité quotidienne de l'utilisateur (poids/cal)
 async function ApiUserActivity(userId) {
-    const response = await fetch(`http://localhost:3000/user/${userId}/activity`)
+    const response = await fetch(`http://localhost:3001/user/${userId}/activity`)
     const data = await response.json()
     const userActivity = data.data.sessions
     userActivity.map((session, index) => (
@@ -21,7 +21,7 @@ async function ApiUserActivity(userId) {
 
 // Récupération des données des infos clés du l'utilisateur
 async function ApiUserCount(userId) {
-    const response = await fetch(`http://localhost:3000/user/${userId}`)
+    const response = await fetch(`http://localhost:3001/user/${userId}`)
     const data = await response.json()
     const userCount = data.data.keyData
     const userCalories = userCount.calorieCount
@@ -33,7 +33,7 @@ async function ApiUserCount(userId) {
 
 // Récupération du temps de session quotidienne de l'utilisateur 
 async function ApiUserSessions(userId) {
-    const response = await fetch(`http://localhost:3000/user/${userId}/average-sessions`)
+    const response = await fetch(`http://localhost:3001/user/${userId}/average-sessions`)
     const data = await response.json()
     const userSessions = data.data.sessions
     return userSessions
@@ -41,7 +41,7 @@ async function ApiUserSessions(userId) {
 
 // Récupération des différents types d'activités de l'utilisateur
 async function ApiUserPerformance(userId) {
-    const response = await fetch(`http://localhost:3000/user/${userId}/performance`)
+    const response = await fetch(`http://localhost:3001/user/${userId}/performance`)
     const data = await response.json()
     const userPerformance = Object.values(data.data.kind)
 
@@ -54,7 +54,7 @@ async function ApiUserPerformance(userId) {
 
 // Récupération du score de l'utilisateur atteint par rapport l'objectif donnée
 async function ApiUserScore(userId) {
-    const response = await fetch(`http://localhost:3000/user/${userId}`)
+    const response = await fetch(`http://localhost:3001/user/${userId}`)
     const data = await response.json()
     const userScore = await [
         {
