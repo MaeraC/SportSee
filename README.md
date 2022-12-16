@@ -31,7 +31,7 @@ INSTALLATION
 
 . Install dependencies: npm install
 
-. Launch back-end on port 3000 (default port): yarn dev
+. npm start
 <br></br>
 
 ### STEP 2 : INSTALLING AND LAUNCHING FRONT-END 
@@ -42,6 +42,6 @@ INSTALLATION
 
 . Install dependencies : npm install
 
-. Launch front-end on port 3001: npm start
+. npm start
 <br></br>
 
